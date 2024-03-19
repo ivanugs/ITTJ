@@ -17,6 +17,7 @@
                     <th scope="col">Familia</th>
                     <th scope="col">Imagen</th>
                     <th scope="col">Descripcion</th>
+                    <th scope="col">Tipo</th>
                     <th scope="col">Fecha de publicacion</th>
                     <th scope="col">Fecha de creacion</th>
                     <th scope="col">Fecha de actualizacion</th>
@@ -30,6 +31,7 @@
                         <td>{{$item->family}}</td>
                         <td>{{$item->image}}</td>
                         <td>{{$item->description}}</td>
+                        <td>{{$item->type}}</td>
                         <td>{{$item->publication_date}}</td>
                         <td>{{$item->created_at}}</td>
                         <td>{{$item->updated_at}}</td>

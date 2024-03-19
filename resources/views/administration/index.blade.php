@@ -41,6 +41,7 @@
                                         <th>Imagen</th>
                                         <th>Descripcion</th>
                                         <th>Id Familia</th>
+                                        <th>Tipo</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -58,6 +59,7 @@
                                             </td>
                                             <td>{{ $item->description }}</td>
                                             <td>{{ $item->family }}</td>
+                                            <td>{{ $item->type }}</td>
                                             <td>
                                                 <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary " href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
@@ -83,7 +85,7 @@
 <!-- Modal -->
 <div class="modal fade" id="imagenModal" tabindex="-1" role="dialog" aria-labelledby="imagenModalLabel" aria-hidden="true">
     <!-- Tamaño del modal -->
-    <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-dialog modal-xxl" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="imagenModalLabel">Imagen</h5>

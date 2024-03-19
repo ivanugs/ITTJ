@@ -2,17 +2,17 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('scientific_name') }}
+            {{ Form::label('Nombre Científico') }}
             {{ Form::text('scientific_name', $plantaFamilia->scientific_name, ['class' => 'form-control' . ($errors->has('scientific_name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Cientifico']) }}
             {!! $errors->first('scientific_name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('common_name') }}
+            {{ Form::label('Nombre Común') }}
             {{ Form::text('common_name', $plantaFamilia->common_name, ['class' => 'form-control' . ($errors->has('common_name') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Popular']) }}
             {!! $errors->first('common_name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('publication_date') }}
+            {{ Form::label('Fecha de publicación') }}
             {{ Form::text('publication_date', $plantaFamilia->publication_date, ['class' => 'form-control' . ($errors->has('publication_date') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Publicacion']) }}
             {!! $errors->first('publication_date', '<div class="invalid-feedback">:message</div>') !!}
         </div>
@@ -24,21 +24,21 @@
         </div>
         -->
         <div class="form-group">
-            {{ Form::label('description') }}
+            {{ Form::label('Descripción') }}
             {{ Form::text('description', $plantaFamilia->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         
         <div class="form-group">
-            {{ Form::label('family') }}
+            {{ Form::label('Familia') }}
             {{ Form::text('family', $plantaFamilia->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Id Familia']) }}
             {!! $errors->first('family', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        {{-- <div class="form-group">
-            {{ Form::label('tipo') }}
-            {{ Form::text('tipo', $plantaFamilia->tipo, ['class' => 'form-control' . ($errors->has('tipo') ? ' is-invalid' : ''), 'placeholder' => 'Tipo']) }}
-            {!! $errors->first('tipo', '<div class="invalid-feedback">:message</div>') !!}
-        </div> --}}
+        <div class="form-group">
+            {{ Form::label('Tipo de planta') }}
+            {{ Form::text('type', $plantaFamilia->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : ''), 'placeholder' => 'Tipo']) }}
+            {!! $errors->first('type', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
 
         <div class="form-group mt-4 mb-4">
     {{ Form::label('image', 'Imagen') }}

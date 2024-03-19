@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('scientific_name');
             $table->string('common_name')->nullable();
             $table->string('family');
-            $table->string('image')->nullable();
-            $table->text('description')->nullable();
-            $table->timestamp('publication_date')->nullable();
+            $table->string('image');
+            $table->text('description');
+            $table->text('type');
+            $table->timestamp('publication_date');
             $table->timestamps();
         });
     }
