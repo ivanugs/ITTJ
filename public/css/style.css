@@ -2,6 +2,7 @@
    height: 60vh!important;
    margin: auto;
    min-height: 300px;
+   overflow: hidden;
 }
 .carousel-item-custom {
    height: 60vh!important;
@@ -16,7 +17,9 @@
    flex: 1 1 auto;
    min-width: 50%;
    min-height: 100%;
+   text-align: center;
 }
+
 .carousel-caption h1,
 .carousel-caption p {
    width: fit-content;
@@ -28,32 +31,23 @@
    border-radius: 15px;
 }
 
-
-
-@media (max-width: 576px) {
-   .carousel-custom {
-      height: 300px; /* Ajusta la altura para dispositivos pequeños */
-   }
+.carousel-caption-custom p {
+   font-size: 2rem;
+   margin-bottom: 1rem;
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
-   .carousel-custom {
-      height: 400px; /* Ajusta la altura para dispositivos medianos */
-   }
+.carousel-caption-custom h1 {
+   font-size: 4rem;
+   margin-bottom: 2rem; 
 }
 
-@media (min-width: 769px) {
-   .carousel-custom {
-      height: 60vh; /* Mantiene la altura para dispositivos grandes */
+/* Media query para ajustar estilos en pantallas más pequeñas */
+@media (max-width: 768px) {
+   .carousel-caption-custom p {
+       font-size: 1rem !important;
    }
-   .carousel-caption h1,
-   .carousel-caption p {
-      width: fit-content;
-      height: fit-content;
-      background: rgb(45, 87, 44, 0.5);
-      padding: 10px; 
-      color: white;
-      margin: 10px; 
-      border-radius: 15px;
+
+   .carousel-caption-custom h1 {
+       font-size: 2rem !important;
    }
 }
