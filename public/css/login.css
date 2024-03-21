@@ -7,14 +7,10 @@
 
 .navbar-app .navbar-brand {
     font-size: 24px; /* Tamaño del texto */
-    font-family: 'Kavoon', sans-serif;
     color: white;
     font-weight: bold; /* Negrita */
     width: 100%; /* Asegura que el ancho del texto sea del 100% */
 }
-
-
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
 body  {
     background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
@@ -42,28 +38,6 @@ from {background-position: top;background-size:3000px; }
 to {background-position: -100px 0px;background-size:2750px;}
 
 }
-
-/* @keyframes color {
-    0%   { background: #33CCCC; }
-    20%  { background: #33CC36; }
-    40%  { background: #B8CC33; }
-    60%  { background: #FCCA00; }
-    80%  { background: #33CC36; }
-    100% { background: #33CCCC; }
-}
-
-.navbar-app {
-    background: #33CCCC; 
-    animation: color 9s infinite linear;
-    text-align: center;
-    padding: 2em;
-}
-h1 {
-    text-align: center;
-    font-family: 'Kavoon', sans-serif;
-    font-size: 2.5em;
-    color: white;
-} */
 
 .custom-card {
     /* Agrega aquí tus estilos personalizados para la tarjeta */

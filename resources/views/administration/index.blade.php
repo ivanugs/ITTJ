@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Planta Familia
+    Registros
 @endsection
 
 @section('content')
@@ -13,12 +13,13 @@
                 <div class="card">
                     <div class="card-header">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <span id="card_title">
-                                {{ __('Planta Familia') }}
+                            <span id="card_title" class="fs-4 fw-bold text-success">
+                                {{ __('Registros de plantas y familias') }}
                             </span>
                             <div class="float-right">
-                                <a href="{{ route('admin.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                {{ __('Create New') }}
+                                <a href="{{ route('admin.create') }}" class="btn btn-primary btn-sm float-right fs-5"  data-placement="left">
+                                    <i class="fa-solid fa-plus"></i>
+                                    {{ __('Crear nuevo registro') }}
                                 </a>
                             </div>
                         </div>
@@ -29,42 +30,43 @@
                         </div>
                     @endif
 
-                    <div class="card-body">
+                    <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
-                                <thead class="thead">
+                                <thead class="thead fs-5">
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nombre Cientifico</th>
+                                        <th>ID</th>
+                                        <th>Nombre Científico</th>
                                         <th>Nombre Popular</th>
-                                        <th>Fecha Publicacion</th>
-                                        <th>Imagen</th>
                                         <th>Familia</th>
                                         <th>Tipo</th>
-                                        <th></th>
+                                        <th>Imagen</th>
+                                        <th>Fecha Publicación</th>
+                                        <th>Operaciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($plantaFamilias as $item)
-                                        <tr>
+                                        <tr class="fs-5 fw-light">
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->scientific_name }}</td>
                                             <td>{{ $item->common_name }}</td>
-                                            <td>{{ $item->publication_date }}</td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-sm" onclick="showModal('{{ $item->image }}', '{{ $item->scientific_name }}','{{ $item->description }}')">
-                                                    Show
-                                                </button>
-                                            </td>
                                             <td>{{ $item->family }}</td>
                                             <td>{{ $item->type }}</td>
                                             <td>
+                                                <button type="button" class="btn btn-primary btn-sm fs-6" onclick="showModal('{{ $item->image }}', '{{ $item->scientific_name }}','{{ $item->description }}')">
+                                                    <i class="fa-solid fa-image"></i>
+                                                    Vista previa
+                                                </button>
+                                            </td>
+                                            <td>{{ $item->publication_date }}</td>
+                                            <td>
                                                 <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
+                                                    <a class="btn btn-sm btn-success fs-6" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm fs-6"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                             </td>
                                         </tr>
