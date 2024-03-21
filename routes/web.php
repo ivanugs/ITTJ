@@ -20,11 +20,6 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', HomeController::class)->name('home');
 
-
-Route::get('/', function(){
-    return view('home');
-});
-
 Auth::routes();
 
 Route::controller(AdministrationController::class)->group(function(){
