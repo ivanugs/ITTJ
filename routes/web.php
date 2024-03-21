@@ -23,7 +23,7 @@ Route::get('/', HomeController::class)->name('home');
 /*
 teniamo esta ruta duplicada por eso nos mandaba al vista de laravel 
 Route::get('/', function(){
-    return view('welcome');
+    return view('home');
 });
 */
 Auth::routes();
