@@ -39,8 +39,7 @@
                                         <th>Nombre Popular</th>
                                         <th>Fecha Publicacion</th>
                                         <th>Imagen</th>
-                                        <th>Descripcion</th>
-                                        <th>Id Familia</th>
+                                        <th>Familia</th>
                                         <th>Tipo</th>
                                         <th></th>
                                     </tr>
@@ -48,7 +47,7 @@
                                 <tbody>
                                     @foreach ($plantaFamilias as $item)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ $item->id }}</td>
                                             <td>{{ $item->scientific_name }}</td>
                                             <td>{{ $item->common_name }}</td>
                                             <td>{{ $item->publication_date }}</td>
@@ -57,7 +56,6 @@
                                                     Show
                                                 </button>
                                             </td>
-                                            <td>{{ $item->description }}</td>
                                             <td>{{ $item->family }}</td>
                                             <td>{{ $item->type }}</td>
                                             <td>
@@ -82,6 +80,7 @@
     </div>
 
 
+<!-- Modal -->
 <!-- Modal -->
 <div class="modal fade" id="imagenModal" tabindex="-1" role="dialog" aria-labelledby="imagenModalLabel" aria-hidden="true">
     <!-- Tamaño del modal -->
@@ -110,10 +109,11 @@
     </div>
 </div>
 
+
 <script>
     function showModal(image, scientific_name, description) {
         var modal = $('#imagenModal');
-        modal.find('.modal-body img').attr('src', image);
+        modal.find('.modal-body img').attr('src', "{{ asset('storage/') }}" + '/' + image);
         modal.find('.modal-title').text(scientific_name + ' - Imagen');
         modal.find('#descripcion').text(description);
         modal.modal('show');

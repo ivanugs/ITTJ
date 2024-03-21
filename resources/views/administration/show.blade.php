@@ -1,4 +1,4 @@
-@extends('layouts.plantilla')
+@extends('layouts.app')
 
 @section('template_title')
     {{ $plantaFamilias->name ?? __('Show') . " " . __('Planta Familia') }}
@@ -14,14 +14,23 @@
                             <span class="card-title">{{ __('Show') }} Planta Familia</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('planta-familias.index') }}"> {{ __('Back') }}</a>
+                            <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Back') }}</a>
                         </div>
                     </div>
 
                     <div class="card-body">
+                        {{-- 
+                            TIPO
+                            NOMBRE CIENTIFICO
+                            NOMBRE COMMUN
+                            FAMILIA
+                            IMAGEN
+                            DESCRIPCION
+                            PIE -- FECHA DE PUBLICACION
+                        --}}
                         <div class="form-group">
-                            <strong>Imagen:</strong>
-                            {{ $plantaFamilias->image }}
+                            <strong>Tipo:</strong>
+                            {{ $plantaFamilias->type }}
                         </div>
                         <div class="form-group">
                             <strong>Nombre Cientifico:</strong>
@@ -32,16 +41,20 @@
                             {{ $plantaFamilias->common_name }}
                         </div>
                         <div class="form-group">
-                            <strong>Fecha Publicacion:</strong>
-                            {{ $plantaFamilias->publication_date }}
+                            <strong>Id Familia:</strong>
+                            {{ $plantaFamilias->id }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Imagen:</strong>
+                            <img src="{{ asset('storage/' . $plantaFamilias->image) }}" alt="{{$plantaFamilias->image}}">
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $plantaFamilias->description }}
                         </div>
                         <div class="form-group">
-                            <strong>Id Familia:</strong>
-                            {{ $plantaFamilias->id }}
+                            <strong>Fecha Publicacion:</strong>
+                            {{ $plantaFamilias->publication_date }}
                         </div>
                     </div>
                 </div>

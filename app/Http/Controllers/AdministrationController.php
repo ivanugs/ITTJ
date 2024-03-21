@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\PlantaFamilia;
+use DateTime;
 use Illuminate\Http\Request;
 
 class AdministrationController extends Controller
@@ -16,68 +17,83 @@ class AdministrationController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $plantaFamilias->perPage());
     }
 
+    ///Metodo para retornar la pagina de create
     public function create()
     {
-        $plantaFamilia = new PlantaFamilia();
-        return view('administration.create', compact('plantaFamilia'));
+        $plantaFamilias = new PlantaFamilia();
+        return view('administration.create', compact('plantaFamilias'));
     }
 
+    //Metodo para retornar la pagina de edicion
     public function edit($id)
     {
-        $plantaFamilia = PlantaFamilia::find($id);
+        $plantaFamilias = PlantaFamilia::find($id);
 
-        return view('administration.edit', compact('plantaFamilia'));
+        return view('administration.edit', compact('plantaFamilias'));
     }
 
+    //Metodo para guardar las imagenes
     public function store(Request $request)
     {
         // Validar la solicitud
         $request->validate(PlantaFamilia::$rules);
 
+        $image =  $request->file('image');;
+
         // Manejar el archivo de imagen
         if ($request->hasFile('image')) {
             // Generar un nombre único para el archivo de imagen
-            $imageName = time() . '.' . $request->image->getClientOriginalExtension();
+            $imageName = time() . '_' . $image->getClientOriginalName();
 
             // Guardar el archivo en la carpeta storage/app/public
-            $request->image->storeAs('public', $imageName);
+            $image->storeAs('public', $imageName);
 
             // Obtener la URL correspondiente al archivo guardado
-            $imageUrl = asset('storage/' . $imageName);
+            //$imageUrl = asset('storage/' . $imageName);
         } else {
             // Si no se proporciona ninguna imagen, establecer la URL a nulo
-            $imageUrl = null;
+            $imageName = null;
         }
 
         // Crear una nueva instancia de PlantaFamilia con los datos del formulario
-        $plantaFamilia = new PlantaFamilia();
-        $plantaFamilia->fill($request->all());
+        $plantaFamilias = new PlantaFamilia();
+        $plantaFamilias->fill($request->all());
 
         // Asignar la URL de la imagen
-        $plantaFamilia->image = $imageUrl;
+        $plantaFamilias->image = $imageName;
 
         // Guardar el modelo en la base de datos
-        $plantaFamilia->save();
+        $plantaFamilias->save();
 
         // Redireccionar a la página de índice con un mensaje de éxito
-        return redirect()->route('admin.index')->with('success', 'PlantaFamilia created successfully.');
+       return redirect()->route('admin.index')->with('success', 'Entrada creada exitosamente.');
     }
 
-    public function update(Request $request, PlantaFamilia $plantaFamilia)
+    //Metodo para actualizar los datos de los registros de plantas y familias
+    public function update(Request $request, PlantaFamilia $plantaFamilias)
     {
         request()->validate(PlantaFamilia::$rules);
 
-        $plantaFamilia->update($request->all());
+        $plantaFamilias->update($request->all());
 
-        return redirect()->route('administration.index')
-            ->with('success', 'PlantaFamilia updated successfully');
+        return redirect()->route('admin.index')
+            ->with('success', 'Registro actualizado exitosamente.');
     }
 
+    //Metodo para eliminar registros de plantas o familia
     public function destroy($id)
     {
-        $plantaFamilia = PlantaFamilia::find($id)->delete();
+        $plantaFamilias = PlantaFamilia::find($id)->delete();
 
-        return redirect()->route('administration.index')
-            ->with('success', 'PlantaFamilia deleted successfully');
+        return redirect()->route('admin.index')
+            ->with('success', 'Registro eliminado exitosamente.');
+    }
+
+    //Metodo para mostrar la informacion de los registros de plantas o familias
+    public function show($id)
+    {
+        $plantaFamilias = PlantaFamilia::find($id);
+
+        return view('administration.show', compact('plantaFamilias'));
     }
 }
