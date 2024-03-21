@@ -21,8 +21,8 @@ class PlantaFamiliaController extends Controller
 
     public function show($id)
     {
-        $plantaFamilia = PlantaFamilia::find($id);
+        $plantaFamilias = PlantaFamilia::find($id);
 
-        return view('planta-familia.show', compact('plantaFamilia'));
+        return view('planta-familia.show', compact('plantaFamilias'));
     }
 }

@@ -30,8 +30,9 @@ class PlantaFamilia extends Model
 		'scientific_name' => 'required|string',
 		'common_name' => 'required|string',
 		'family' => 'required|string',
-		'image' => 'required',
+		'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
 		'description' => 'required|string',
+    'type' => 'required|string',
 		'publication_date' => 'required'
     ];
 
@@ -42,7 +43,7 @@ class PlantaFamilia extends Model
      *
      * @var array
      */
-    protected $fillable = ['scientific_name','common_name','family','image','description','publication_date'];
+    protected $fillable = ['scientific_name','common_name','family','image','description','type','publication_date'];
 
     use HasFactory;
 }
