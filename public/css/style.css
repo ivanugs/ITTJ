@@ -71,3 +71,11 @@
       display: none;
    }
 }
+
+/* laptop and desktop */
+@media (min-width: 769px) {
+   .image-custom{
+      height: 60vh;
+      width: 100vw;
+   }
+}
