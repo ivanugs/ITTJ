@@ -12,7 +12,7 @@
       <div class="carousel-inner">
     
         <div class="carousel-item carousel-item-custom active" data-bs-interval="4000">
-          <img src="{{asset('images/carousel/dicliptera-peduncularis-nees.jpg')}}" class="d-block w-100" alt="dicliptera-peduncularis-nees">
+          <img src="{{asset('images/carousel/dicliptera-peduncularis-nees.jpg')}}" class="image-custom" alt="dicliptera-peduncularis-nees">
           <div class="carousel-caption text-wrap carousel-caption-custom">
             <p class="text-decoration-underline fs-2">Inicio</p>
             <h1 class="display-2">Bienvendio al Herbario Virtual</h1>
@@ -21,7 +21,7 @@
         </div>
     
         <div class="carousel-item carousel-item-custom" data-bs-interval="4000">
-          <img src="{{asset('images/carousel/hyptis-capitata-jacq.jpg')}}" class="d-block w-100" alt="hyptis-capitata-jacq">
+          <img src="{{asset('images/carousel/hyptis-capitata-jacq.jpg')}}" class="image-custom" alt="hyptis-capitata-jacq">
           <div class="carousel-caption carousel-caption-custom">
             <p class="text-decoration-underline fs-2">Especimenes</p>
             <h1 class="display-2">Descubre la gran cantidad de especies que tenemos.</h1>
@@ -30,7 +30,7 @@
         </div>
     
         <div class="carousel-item carousel-item-custom" data-bs-interval="4000">
-          <img src="{{asset('images/carousel/quercus-resinosa-liebm.jpg')}}" class="d-block w-100" alt="quercus-resinosa-liebm">
+          <img src="{{asset('images/carousel/quercus-resinosa-liebm.jpg')}}" class="image-custom" alt="quercus-resinosa-liebm">
           <div class="carousel-caption carousel-caption-custom">
             <p class="text-decoration-underline fs-2">Acerca De</p>
             <h1 class="display-2">Conoce más acerca de este proyecto</h1>

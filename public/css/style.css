@@ -1,11 +1,7 @@
 .carousel-custom{
-   height: 60vh!important;
+   height: 60vh;
+   width: 100vw;
    margin: auto;
-   min-height: 300px;
-   overflow: hidden;
-}
-.carousel-item-custom {
-   height: 60vh!important;
    min-height: 300px;
 }
 
@@ -44,10 +40,34 @@
 /* Media query para ajustar estilos en pantallas más pequeñas */
 @media (max-width: 768px) {
    .carousel-caption-custom p {
-       font-size: 1rem !important;
+      font-size: 0.5rem !important;
    }
 
    .carousel-caption-custom h1 {
-       font-size: 2rem !important;
+      font-size: 1rem !important;
+   }
+
+   .carousel-custom{
+      height: auto;
+      width: 100vw;
+      margin: auto;
+      min-height: 300px;
+   }
+
+   .carousel-caption h1,
+   .carousel-caption p {
+      border-radius: 7px;
+      margin: auto;
+      padding: 5px;
+   }
+
+   .image-custom{
+      overflow: visible;
+   }
+
+   .carousel-control-next-icon,
+   .carousel-control-prev-icon,
+   .carousel-indicators{
+      display: none;
    }
 }

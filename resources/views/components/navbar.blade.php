@@ -6,7 +6,7 @@
     </div>
     <img style="padding-left:20px; align-self: flex-end;" src="{{ asset('images/header/logo.png') }}" alt="TecNM" class="img-fluid" loading="lazy">
     <a class="" href="//www.tlajomulco.tecnm.mx/" target="_blank">
-        <img style="padding-left:20px; align-self: flex-end;" src="{{ asset('images/header/pleca-ittj.png') }}" alt="TecNM" class="img-fluid" loading="lazy">
+        <img id="ittj" style="padding-left:20px; align-self: flex-end;" src="{{ asset('images/header/pleca-ittj.png') }}" alt="TecNM" class="img-fluid" loading="lazy">
     </a>
 </div>
 
