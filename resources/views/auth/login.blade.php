@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8 ">
             <div class="card mt-4 custom-card "> <!-- Nadamas se agregado mt-4 para añadir un margen en la parte superior -->
-                <div class="card-header">{{ __('Iniciar seciòn') }}</div>
+                <div class="card-header">{{ __('Iniciar Sesion') }}</div>
 
                 {{-- <div class="card-body"> --}}
                     <div class="card-body ">
@@ -56,7 +56,7 @@
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Iniciar Seciòn') }}
+                                    {{ __('Iniciar Sesion') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
@@ -69,13 +69,13 @@
                                     @guest
                                         @if (Route::has('login'))
                                             <li class="nav-item">
-                                                {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Seciòn') }}</a> --}}
+                                                {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar Sesion') }}</a> --}}
                                             </li>
                                         @endif
             
                                         @if (Route::has('register'))
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
+                                                <a class="nav-link text-decoration-underline" href="{{ route('register') }}">{{ __('Registrarme') }}</a>
                                             </li>
                                         @endif
                                     @else

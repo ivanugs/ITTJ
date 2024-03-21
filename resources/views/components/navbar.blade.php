@@ -56,11 +56,6 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="{{route('login')}}">Iniciar Sesion</a>
                 </li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="nav-link mx-lg-5 a-custom">Cerrar Sesión</button>
-                </form>
-                
             </ul>
         </div>
         </div>
