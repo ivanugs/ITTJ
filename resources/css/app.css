@@ -1,3 +1,6 @@
-.navbar-custom{
-    background: green;
+/* Agrega estilos personalizados al contenedor */
+¡.card-body-custom {
+    background-color: rgba(85, 255, 0, 0.755);
+    color: white;
+    padding: 20px; /* Ajusta el relleno según tus necesidades */
 }

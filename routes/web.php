@@ -18,12 +18,14 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/home', HomeController::class)->name('home');
+Route::get('/', HomeController::class)->name('home');
 
+/*
+teniamo esta ruta duplicada por eso nos mandaba al vista de laravel 
 Route::get('/', function(){
     return view('home');
 });
-
+*/
 Auth::routes();
 
 Route::controller(AdministrationController::class)->group(function(){
