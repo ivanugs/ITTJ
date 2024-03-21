@@ -1,4 +1,4 @@
-<div class="header-gob-custom">
+<div class="header-custom">
     <div class="">
         <p class="title-custom">Herbario Virtual
             <span class="subt-custom">INSTITUTO TECNOLOGICO DE TLAJOMULCO DE ZUÑIGA, JALISCO.</span> 

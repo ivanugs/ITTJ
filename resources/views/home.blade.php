@@ -13,7 +13,7 @@
     
         <div class="carousel-item carousel-item-custom active" data-bs-interval="4000">
           <img src="{{asset('images/carousel/dicliptera-peduncularis-nees.jpg')}}" class="d-block w-100" alt="dicliptera-peduncularis-nees">
-          <div class="carousel-caption carousel-caption-custom">
+          <div class="carousel-caption text-wrap carousel-caption-custom">
             <p class="text-decoration-underline fs-2">Inicio</p>
             <h1 class="display-2">Bienvendio al Herbario Virtual</h1>
             <p class="fs-5">Some representative placeholder content for the second slide.</p>
