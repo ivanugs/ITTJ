@@ -28,10 +28,10 @@
             {!! $errors->first('family', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Tipo de planta') }}
-            {{ Form::text('type', $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : ''), 'placeholder' => 'Tipo']) }}
+            {{ Form::label('type', 'Tipo de planta') }}
+            {{ Form::select('type', ['planta' => 'Planta', 'familia' => 'Familia'], $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : '')]) }}
             {!! $errors->first('type', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
+        </div>        
 
         <div class="form-group mt-4 mb-4">
     {{ Form::label('image', 'Imagen') }}
