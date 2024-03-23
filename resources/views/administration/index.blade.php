@@ -6,9 +6,11 @@
 
 @section('content')
 <!-- jQuery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ">
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
@@ -33,7 +35,7 @@
                     <div class="card-body p-0">
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
-                                <thead class="thead fs-5">
+                                <thead class="thead">
                                     <tr>
                                         <th>ID</th>
                                         <th>Nombre Científico</th>
@@ -59,7 +61,9 @@
                                                     Vista previa
                                                 </button>
                                             </td>
-                                            <td>{{ $item->publication_date }}</td>
+                                            <td>{{ $item->description }}</td>
+                                            <td>{{ $item->family }}</td>
+                                            <td>{{ $item->type }}</td>
                                             <td>
                                                 <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
@@ -90,10 +94,11 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="imagenModalLabel">Imagen</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                {{-- QUITE LA X del modal --}}
+                {{-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> --}}
             </div>
             <div class="modal-body">
-                <div class="row">
+                <div class="row ">
                     <div class="col-md-6">
                         <!-- Imagen cargada dinámicamente -->
                         <img src="" class="img-fluid" alt="">
