@@ -84,7 +84,9 @@ class AdministrationController extends Controller
             // Guardar el archivo en la carpeta storage/app/public
             $image->storeAs('public', $imageName);
             // Eliminar la imagen actual si existe
-            unlink($path);
+            if ($currentImage) {
+                unlink($path);
+            }
         } else {
             // Si no se proporciona ninguna imagen nueva, mantener la imagen actual
             $imageName = $currentImage;
