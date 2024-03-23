@@ -61,9 +61,7 @@
                                                     Vista previa
                                                 </button>
                                             </td>
-                                            <td>{{ $item->description }}</td>
-                                            <td>{{ $item->family }}</td>
-                                            <td>{{ $item->type }}</td>
+                                            <td>{{ $item->publication_date }}</td>
                                             <td>
                                                 <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>

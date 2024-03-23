@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\PlantaFamilia;
 use DateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AdministrationController extends Controller
 {
@@ -47,9 +48,6 @@ class AdministrationController extends Controller
 
             // Guardar el archivo en la carpeta storage/app/public
             $image->storeAs('public', $imageName);
-
-            // Obtener la URL correspondiente al archivo guardado
-            //$imageUrl = asset('storage/' . $imageName);
         } else {
             // Si no se proporciona ninguna imagen, establecer la URL a nulo
             $imageName = null;
@@ -69,16 +67,40 @@ class AdministrationController extends Controller
        return redirect()->route('admin.index')->with('success', 'Entrada creada exitosamente.');
     }
 
-    //Metodo para actualizar los datos de los registros de plantas y familias
     public function update(Request $request, PlantaFamilia $plantaFamilias)
     {
-        request()->validate(PlantaFamilia::$rules);
+        // Validar la solicitud
+        $request->validate(PlantaFamilia::$rules);
 
-        $plantaFamilias->update($request->all());
+        // Obtener la imagen actual del modelo
+        $currentImage = $plantaFamilias->image;
+        $path = Storage::path('\public/'.$currentImage);
 
-        return redirect()->route('admin.index')
-            ->with('success', 'Registro actualizado exitosamente.');
+        // Manejar la nueva imagen
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            // Generar un nombre único para el archivo de imagen
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            // Guardar el archivo en la carpeta storage/app/public
+            $image->storeAs('public', $imageName);
+            // Eliminar la imagen actual si existe
+            unlink($path);
+        } else {
+            // Si no se proporciona ninguna imagen nueva, mantener la imagen actual
+            $imageName = $currentImage;
+        }
+
+        // Actualizar los demás campos del modelo
+        $plantaFamilias->fill($request->all());
+        // Asignar la URL de la imagen actualizada
+        $plantaFamilias->image = $imageName;
+        // Guardar el modelo en la base de datos
+        $plantaFamilias->save();
+
+        // Redireccionar a la página de índice con un mensaje de éxito
+        return redirect()->route('admin.index')->with('success', 'Registro actualizado exitosamente.');
     }
+
 
     //Metodo para eliminar registros de plantas o familia
     public function destroy($id)

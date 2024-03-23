@@ -28,7 +28,7 @@ Route::controller(AdministrationController::class)->group(function(){
     Route::get('/admin/{id}/edit', 'edit')->name('admin.edit'); //editar planta o familia
     Route::get('/admin/{id}', 'show')->name('admin.show'); //mostrar los registros de plantas y familias
     Route::post('/admin', 'store')->name('admin.store'); //guardar la imagen
-    Route::put('/admin/{plantaFamilia}', 'update')->name('admin.update'); //actualizar
+    Route::put('/admin/{plantaFamilias}', 'update')->name('admin.update'); //actualizar
     Route::delete('/admin/{id}', 'destroy')->name('admin.destroy'); //eliminar un registro de planta o familia
 });
 
