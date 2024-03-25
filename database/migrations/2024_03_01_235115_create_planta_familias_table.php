@@ -15,18 +15,15 @@ return new class extends Migration
             $table->increments('id');
             $table->string('scientific_name');
             $table->string('common_name')->nullable();
-            $table->string('family');
+            $table->string('family')->nullable();
             $table->string('image');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->text('type');
             $table->timestamp('publication_date');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('planta_familias');
