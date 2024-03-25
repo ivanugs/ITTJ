@@ -52,19 +52,3 @@
         border-radius: 5px 5px 0 0; /* Redondear las esquinas superiores */
         /* Otros estilos según tus preferencias */
     }
-    
-    
-    
-    .modal-footer{
-        /* Tus estilos personalizados aquí */
-        background-color:#336132; /* Cambiar el color de fondo */
-        color: #fffdfd; /* Cambiar el color del texto */
-        font-size: 40px; /* Cambiar el tamaño del texto */
-        padding: 10px 15px; /* Ajustar el relleno */
-        border-radius: 5px 5px 0 0; /* Redondear las esquinas superiores */
-        /* Otros estilos según tus preferencias */
-    }
-
-    .table-responsive {
-        overflow-x: auto;
-    }
