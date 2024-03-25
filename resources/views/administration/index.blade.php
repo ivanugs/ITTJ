@@ -63,13 +63,30 @@
                                             </td>
                                             <td>{{ $item->publication_date }}</td>
                                             <td>
-                                                <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
+                                                {{-- <form action="{{ route('admin.destroy',$item->id) }}" method="POST">
                                                     <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
                                                     <a class="btn btn-sm btn-success fs-6" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm fs-6"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
+                                                </form> --}}
+                                                {{-- Creamos la funcion de la alerta  de confimacion --}}
+                                                <form id="delete-form-{{ $item->id }}" action="{{ route('admin.destroy',$item->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
+                                                    <a class="btn btn-sm btn-success fs-6" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="button" class="btn btn-danger btn-sm fs-6" onclick="confirmDelete('{{ $item->id }}')"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
+                                                
+                                                <script>
+                                                    function confirmDelete(itemId) {
+                                                        if (confirm("¿Estás seguro de que deseas eliminar este elemento?")) {
+                                                            document.getElementById('delete-form-' + itemId).submit();
+                                                        }
+                                                    }
+                                                </script>
+                                                
                                             </td>
                                         </tr>
                                     @endforeach

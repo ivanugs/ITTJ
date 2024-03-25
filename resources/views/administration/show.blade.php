@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<link href="{{ asset('css/show.css') }}" rel="stylesheet">
     <section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -13,9 +14,12 @@
                         <div class="float-left">
                             <span class="card-title">{{ __('Show') }} Planta Familia</span>
                         </div>
-                        <div class="float-right">
+                        {{-- <div class="float">
                             <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Back') }}</a>
-                        </div>
+                        </div> --}}
+                    </div>
+                    <div class="float">
+                        <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Atras') }}</a>
                     </div>
 
                     <div class="card-body">
@@ -44,10 +48,11 @@
                             <strong>Id Familia:</strong>
                             {{ $plantaFamilias->id }}
                         </div>
-                        <div class="form-group">
+                        {{-- la movi al ultimo --}}
+                        {{-- <div class="form-group">
                             <strong>Imagen:</strong>
                             <img src="{{ asset('storage/' . $plantaFamilias->image) }}" alt="{{$plantaFamilias->image}}">
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $plantaFamilias->description }}
@@ -55,6 +60,11 @@
                         <div class="form-group">
                             <strong>Fecha Publicacion:</strong>
                             {{ $plantaFamilias->publication_date }}
+                        </div>
+                        <div class="form-group">
+                            {{-- Se comento esta linea para no mostrar el trxto de de imagen a un lado --}}
+                            {{-- <strong>Imagen:</strong> --}}
+                            <img src="{{ asset('storage/' . $plantaFamilias->image) }}" alt="{{$plantaFamilias->image}}">
                         </div>
                     </div>
                 </div>

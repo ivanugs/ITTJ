@@ -53,18 +53,19 @@
         /* Otros estilos según tus preferencias */
     }
     
+    .form-group {
+        text-align: center; /* Centra horizontalmente */
+    }
     
-    
-    .modal-footer{
-        /* Tus estilos personalizados aquí */
-        background-color:#336132; /* Cambiar el color de fondo */
-        color: #fffdfd; /* Cambiar el color del texto */
-        font-size: 40px; /* Cambiar el tamaño del texto */
-        padding: 10px 15px; /* Ajustar el relleno */
-        border-radius: 5px 5px 0 0; /* Redondear las esquinas superiores */
-        /* Otros estilos según tus preferencias */
+    .form-group img {
+        display: inline-block; /* Para que se comporte como un elemento de bloque */
+        /* Opcional: agregar más estilos según sea necesario */
     }
 
-    .table-responsive {
-        overflow-x: auto;
+    .float-left {
+        float: left;
+    }
+    
+    .text-danger {
+        color: red;
     }

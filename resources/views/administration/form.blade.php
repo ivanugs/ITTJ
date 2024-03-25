@@ -1,3 +1,4 @@
+<link href="{{ asset('css/edit.css') }}" rel="stylesheet">
 <div class="box box-info padding-1">
     <div class="box-body">
         
@@ -40,7 +41,12 @@
 </div>
 
     </div>
-    <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">{{ __('Submit') }}</button>
+    {{-- creamos el boton de cancelar para la vista editar --}}
+    <div class="box-footer mt-20">
+        <button type="submit" class="btn btn-primary mb-2">{{ __('Actualizar') }}</button>
     </div>
+    <div class="float-left">
+        <a class="btn btn-danger mt-2" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>
+    </div>
+    
 </div>
