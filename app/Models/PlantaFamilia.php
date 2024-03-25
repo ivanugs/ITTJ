@@ -29,20 +29,13 @@ class PlantaFamilia extends Model
     static $rules = [
 		'scientific_name' => 'required|string',
 		'common_name' => 'required|string',
-		'family' => 'required|string',
 		'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
 		'description' => 'required|string',
-    'type' => 'required|string',
 		'publication_date' => 'required'
     ];
 
     protected $perPage = 20;
-
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
+    
     protected $fillable = ['scientific_name','common_name','family','image','description','type','publication_date'];
 
     use HasFactory;
