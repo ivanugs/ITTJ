@@ -34,6 +34,15 @@ class PlantaFamilia extends Model
 		'publication_date' => 'required'
     ];
 
+    public function getFamilyNameAttribute()
+    {
+        // Verifica si hay una relación válida con el ID de la familia
+        $familia = PlantaFamilia::find($this->family);
+        
+        // Si la relación existe, devuelve el nombre de la familia, de lo contrario, devuelve un valor predeterminado o null
+        return $familia ? $familia->scientific_name : 'Nombre de familia no encontrado';
+    }
+
     protected $perPage = 20;
     
     protected $fillable = ['scientific_name','common_name','family','image','description','type','publication_date'];

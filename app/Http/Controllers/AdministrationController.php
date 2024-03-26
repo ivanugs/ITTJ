@@ -26,6 +26,7 @@ class AdministrationController extends Controller
     //MOSTRAR VISTA de la pagina de edicion
     public function edit($id){
         $plantaFamilias = PlantaFamilia::find($id);
+        
         return view('administration.edit', compact('plantaFamilias'));
     }
 
@@ -68,7 +69,7 @@ class AdministrationController extends Controller
             ->with('success', 'Registro eliminado exitosamente.');
     }
 
-    //METODO para mostrar la informacion de los registros de plantas o familias
+    //MOSTRAR VISTA de detalle de los registros de plantas o familias
     public function show($id){
         $plantaFamilias = PlantaFamilia::find($id);
         return view('administration.show', compact('plantaFamilias'));
