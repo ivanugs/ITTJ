@@ -53,7 +53,7 @@
                                             <td>{{ $item->id }}</td>
                                             <td>{{ $item->scientific_name }}</td>
                                             <td>{{ $item->common_name }}</td>
-                                            <td>{{ $item->family }}</td>
+                                            <td>{{ $item->familyName }}</td>
                                             <td>{{ $item->type }}</td>
                                             <td>
                                                 <button type="button" class="btn btn-primary btn-sm fs-6" onclick="showModal('{{ $item->image }}', '{{ $item->scientific_name }}','{{ $item->description }}')">

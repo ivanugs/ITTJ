@@ -23,18 +23,9 @@
                     </div>
 
                     <div class="card-body">
-                        {{-- 
-                            TIPO
-                            NOMBRE CIENTIFICO
-                            NOMBRE COMMUN
-                            FAMILIA
-                            IMAGEN
-                            DESCRIPCION
-                            PIE -- FECHA DE PUBLICACION
-                        --}}
                         <div class="form-group">
                             <strong>Tipo:</strong>
-                            {{ $plantaFamilias->type }}
+                            {{ strtoupper($plantaFamilias->type) }}
                         </div>
                         <div class="form-group">
                             <strong>Nombre Cientifico:</strong>
@@ -45,14 +36,9 @@
                             {{ $plantaFamilias->common_name }}
                         </div>
                         <div class="form-group">
-                            <strong>Id Familia:</strong>
-                            {{ $plantaFamilias->id }}
+                            <strong>Familia:</strong>
+                            {{ $plantaFamilias->familyName }}
                         </div>
-                        {{-- la movi al ultimo --}}
-                        {{-- <div class="form-group">
-                            <strong>Imagen:</strong>
-                            <img src="{{ asset('storage/' . $plantaFamilias->image) }}" alt="{{$plantaFamilias->image}}">
-                        </div> --}}
                         <div class="form-group">
                             <strong>Descripcion:</strong>
                             {{ $plantaFamilias->description }}

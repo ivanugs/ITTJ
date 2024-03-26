@@ -25,4 +25,6 @@ class PlantaFamiliaController extends Controller
 
         return view('planta-familia.show', compact('plantaFamilias'));
     }
+
+    
 }

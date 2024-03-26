@@ -25,7 +25,7 @@
         
         <div class="form-group">
             {{ Form::label('Familia') }}
-            {{ Form::text('family', $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Id Familia']) }}
+            {{ Form::text('family', $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione la familia, en caso de aplicar.']) }}
             {!! $errors->first('family', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
@@ -43,7 +43,7 @@
     </div>
     {{-- creamos el boton de cancelar para la vista editar --}}
     <div class="box-footer mt-20">
-        <button type="submit" class="btn btn-primary mb-2">{{ __('Actualizar') }}</button>
+        <button type="submit" class="btn btn-primary mb-2">{{ __('Enviar') }}</button>
     </div>
     <div class="float-left">
         <a class="btn btn-danger mt-2" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>
