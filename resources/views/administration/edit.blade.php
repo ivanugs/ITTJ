@@ -6,8 +6,8 @@
 
 @section('content')
     <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
 
                 @includeif('partials.errors')
 
@@ -19,9 +19,7 @@
                         <form method="POST" action="{{ route('admin.update', $plantaFamilias->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PUT') }}
                             @csrf
-
                             @include('administration.form')
-
                         </form>
                     </div>
                 </div>

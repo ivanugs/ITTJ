@@ -1,5 +1,5 @@
 <link href="{{ asset('css/edit.css') }}" rel="stylesheet">
-<div class="box box-info padding-1">
+<div class="box box-info p-1">
     <div class="box-body">
         
         <div class="form-group">
@@ -19,10 +19,9 @@
         </div>
         <div class="form-group">
             {{ Form::label('Descripción') }}
-            {{ Form::text('description', $plantaFamilias->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion']) }}
+            {{ Form::textarea('description', $plantaFamilias->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        
         <div class="form-group">
             {{ Form::label('Familia') }}
             {{ Form::text('family', $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione la familia, en caso de aplicar.']) }}
@@ -33,20 +32,17 @@
             {{ Form::select('type', ['planta' => 'Planta', 'familia' => 'Familia'], $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : '')]) }}
             {!! $errors->first('type', '<div class="invalid-feedback">:message</div>') !!}
         </div>        
-
-        <div class="form-group mt-4 mb-4">
-    {{ Form::label('image', 'Imagen') }}
-    <input type="file" name="image" class="form-control-file{{ $errors->has('image') ? ' is-invalid' : '' }}" id="image">
-    {!! $errors->first('image', '<div class="invalid-feedback">:message</div>') !!}
-</div>
-
+        <div class="form-group">
+            {{ Form::label('image', 'Imagen') }} <br>
+            {{ Form::file('image', ['class' => 'form-control-file pt-1 pb-3' . ($errors->has('image') ? ' is-invalid' : ''), 'id' => 'image']) }}
+            {!! $errors->first('image', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
     </div>
     {{-- creamos el boton de cancelar para la vista editar --}}
-    <div class="box-footer mt-20">
-        <button type="submit" class="btn btn-primary mb-2">{{ __('Enviar') }}</button>
+    <div class="d-inline">
+        <button type="submit" class="btn btn-primary">{{ __('Enviar') }}</button>
     </div>
-    <div class="float-left">
-        <a class="btn btn-danger mt-2" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>
+    <div class="d-inline p-3">
+        <a class="btn btn-danger" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>
     </div>
-    
 </div>
