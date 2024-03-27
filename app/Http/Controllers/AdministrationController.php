@@ -17,7 +17,7 @@ class AdministrationController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $plantaFamilias->perPage());
     }
 
-    ///MOSTRAR VISTA de la pagina de create
+    //MOSTRAR VISTA de la pagina de create
     public function create(){
         $plantaFamilias = new PlantaFamilia();
         return view('administration.create', compact('plantaFamilias'));

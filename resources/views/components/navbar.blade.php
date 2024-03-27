@@ -47,11 +47,11 @@
                     Acerca Del Herbario
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Resumen del Proyecto</a></li>
-                    <li><a class="dropdown-item" href="#">Antecedentes</a></li>
-                    <li><a class="dropdown-item" href="#">Importancia</a></li>
-                    <li><a class="dropdown-item" href="#">Agradecimientos</a></li>
-                    <li><a class="dropdown-item" href="#">Equipo</a></li>
+                    <li><a class="dropdown-item" href="{{route('about.summary')}}">Resumen del Proyecto</a></li>
+                    <li><a class="dropdown-item" href="{{route('about.background')}}">Antecedentes</a></li>
+                    <li><a class="dropdown-item" href="{{route('about.importance')}}">Importancia</a></li>
+                    <li><a class="dropdown-item" href="{{route('about.thanks')}}">Agradecimientos</a></li>
+                    <li><a class="dropdown-item" href="{{route('about.team')}}">Equipo</a></li>
                 </ul>
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="{{route('login')}}">Iniciar Sesion</a>
