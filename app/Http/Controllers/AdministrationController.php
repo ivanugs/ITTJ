@@ -42,7 +42,7 @@ class AdministrationController extends Controller
         $plantaFamilias->fill($request->all());  // asignar los demás campos del modelo
         $plantaFamilias->image = $imageName; // Asignar el nuevo nombre a la imagen
         $plantaFamilias->save();
-       return redirect()->route('admin.index')->with('success', 'Entrada creada exitosamente.');
+        return redirect()->route('admin.index')->with('success', 'Entrada creada exitosamente.');
     }
 
     //METODO para actualizar registros de plantas o familia
