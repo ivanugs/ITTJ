@@ -72,5 +72,29 @@
             @yield('content')
         </main>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            // Al cargar la página, comprobamos el valor inicial del select
+            checkType();
+        
+            // Cuando el valor del select cambia, comprobamos nuevamente
+            $('#type').change(function(){
+                checkType();
+            });
+        
+            function checkType() {
+                // Obtenemos el valor seleccionado en el select
+                var selectedType = $('#type').val();
+        
+                // Si el valor seleccionado es "familia", deshabilitamos el campo de entrada de texto
+                if(selectedType == 'planta') {
+                    $('#family').prop('disabled', false); // Si ya está deshabilitado, se habilita
+                } else {
+                    $('#family').prop('disabled', true); // Si está habilitado, se deshabilita
+                }
+            }
+        });
+        </script>
 </body>
 </html>

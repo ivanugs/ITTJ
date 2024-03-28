@@ -36,9 +36,9 @@
                 <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="#">Ordenado por Familia</a>
                 </li>
-                <li class="nav-item nav-item-custom">
+                {{-- <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="#">Biblioteca</a>
-                </li>
+                </li> --}}
                 {{-- <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="#">Malezas</a>
                 </li> --}}

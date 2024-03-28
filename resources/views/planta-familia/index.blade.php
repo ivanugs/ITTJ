@@ -26,7 +26,7 @@
             <tbody>
                 @foreach ($plantaFamilias as $item)
                     <tr class="">
-                        <td scope="row"><a href="{{route('planta-familias.show', $item->id)}}">{{$item->scientific_name}}</a></td>
+                        <td scope="row"><a target="_blank" href="{{route('planta-familias.show', $item->id)}}">{{$item->scientific_name}}</a></td>
                         <td>{{$item->common_name}}</td>
                         <td>{{$item->family}}</td>
                         <td>{{$item->image}}</td>

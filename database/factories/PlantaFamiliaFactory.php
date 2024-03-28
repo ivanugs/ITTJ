@@ -21,12 +21,10 @@ class PlantaFamiliaFactory extends Factory
     public function definition(): array
     {
         return [
-            'scientific_name' => $this->faker->word(),
-            'common_name' => $this->faker->words(2, true),
-            'family' => $this->faker->randomNumber(3, false),
-            'image' => $this->faker->words(2, true),
+            'scientific_name' => $this->faker->words(2, true),
+            'common_name' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
-            'type' => $this->faker->word(),
+            'type' => 'familia',
             'publication_date' => $this->faker->dateTime()
         ];
     }
