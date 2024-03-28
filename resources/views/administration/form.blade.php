@@ -24,12 +24,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('Familia') }}
-            {{ Form::text('family', $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione la familia, en caso de aplicar.']) }}
+            {{ Form::select('family', $familias, $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione la familia, en caso de aplicar.', 'id' => 'family']) }}
             {!! $errors->first('family', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('type', 'Tipo de planta') }}
-            {{ Form::select('type', ['planta' => 'Planta', 'familia' => 'Familia'], $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : '')]) }}
+            {{ Form::select('type', ['planta' => 'Planta', 'familia' => 'Familia'], $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : ''), 'id' => 'type']) }}
             {!! $errors->first('type', '<div class="invalid-feedback">:message</div>') !!}
         </div>        
         <div class="form-group">

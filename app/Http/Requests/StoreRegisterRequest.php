@@ -17,16 +17,17 @@ class StoreRegisterRequest extends FormRequest
     public function rules(){
         return [
             'type' => 'required|string|in:familia,planta',
-            'family' => $this->getFamilyValidationRule(),
+            'family' => $this->getValidationRule(),
+            'description' => $this->getValidationRule(),
+            'common_name' => $this->getValidationRule()
         ];
     }
 
-    protected function getFamilyValidationRule(){
+    protected function getValidationRule(){
         // Si el campo 'type' es 'FAMILIA', permite que 'family' sea nulo
         if ($this->input('type') === 'familia') {
             return 'nullable';
         }
-
         // Si el campo 'type' es 'PLANTA', 'family' no debe ser nulo
         return 'required';
     }

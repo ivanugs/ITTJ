@@ -20,14 +20,15 @@ class AdministrationController extends Controller
     //MOSTRAR VISTA de la pagina de create
     public function create(){
         $plantaFamilias = new PlantaFamilia();
-        return view('administration.create', compact('plantaFamilias'));
+        $familias = PlantaFamilia::where('type', 'familia')->pluck('scientific_name', 'id');
+        return view('administration.create', compact('plantaFamilias', 'familias'));
     }
 
     //MOSTRAR VISTA de la pagina de edicion
     public function edit($id){
         $plantaFamilias = PlantaFamilia::find($id);
-        
-        return view('administration.edit', compact('plantaFamilias'));
+        $familias = PlantaFamilia::where('type', 'familia')->pluck('scientific_name', 'id');
+        return view('administration.edit', compact('plantaFamilias', 'familias'));
     }
 
     //METODO para guardar los datos al crear un nuevo registro
