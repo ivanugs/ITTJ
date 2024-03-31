@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlantaFamiliaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdministrationController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,12 @@ Route::middleware(['auth'])->group(function () {
         Route::put('/admin/{plantaFamilias}', 'update')->name('admin.update');
         Route::delete('/admin/{id}', 'destroy')->name('admin.destroy');
     });
+    // Rutas para administración de usuarios
+    Route::controller(UsersController::class)->group(function(){
+        Route::get('/crear-usuario', 'index')->name('usuarios.index');
+        Route::post('/registrar-usuario', 'store')->name('usuarios.store');
+    });
+
 });
 
 // Estas rutas son las que estan visibles al usuario
@@ -47,11 +54,3 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/about/agradecimientos', 'thanks')->name('about.thanks');
     Route::get('/about/equipo', 'team')->name('about.team');
 });
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
-
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');

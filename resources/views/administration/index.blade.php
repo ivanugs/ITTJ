@@ -19,6 +19,11 @@
                                 {{ __('Registros de plantas y familias') }}
                             </span>
                             <div class="float-right">
+                                @if (auth()->user()->hasRole('Admin'))
+                                <a class="btn btn-primary me-2 same-font-size" href="{{ route('usuarios.index') }}">
+                                    {{ __('Registrar nuevo usuario') }}</a>
+                                @endif
+
                                 <a href="{{ route('admin.create') }}" class="btn btn-primary btn-sm float-right fs-5"  data-placement="left">
                                     <i class="fa-solid fa-plus"></i>
                                     {{ __('Crear nuevo registro') }}
