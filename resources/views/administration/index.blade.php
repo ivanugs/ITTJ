@@ -20,8 +20,10 @@
                             </span>
                             <div class="float-right">
                                 @if (auth()->user()->hasRole('Admin'))
-                                <a class="btn btn-primary me-2 same-font-size" href="{{ route('usuarios.index') }}">
-                                    {{ __('Registrar nuevo usuario') }}</a>
+                                <a  href="{{ route('usuarios.index') }}" class="btn btn-primary btn-sm float-right fs-5 my-2">
+                                    <i class="fa-solid fa-plus"></i>
+                                    {{ __('Registrar nuevo usuario') }}
+                                </a>
                                 @endif
 
                                 <a href="{{ route('admin.create') }}" class="btn btn-primary btn-sm float-right fs-5"  data-placement="left">
@@ -77,11 +79,11 @@
                                                 </form> --}}
                                                 {{-- Creamos la funcion de la alerta  de confimacion --}}
                                                 <form id="delete-form-{{ $item->id }}" action="{{ route('admin.destroy',$item->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary fs-6" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
-                                                    <a class="btn btn-sm btn-success fs-6" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                    <a class="btn btn-sm btn-primary fs-6 my-1" href="{{ route('admin.show',$item->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Mostrar') }}</a>
+                                                    <a class="btn btn-sm btn-success fs-6 my-1" href="{{ route('admin.edit',$item->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="button" class="btn btn-danger btn-sm fs-6" onclick="confirmDelete('{{ $item->id }}')"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
+                                                    <button type="button" class="btn btn-danger btn-sm fs-6 my-1" onclick="confirmDelete('{{ $item->id }}')"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
                                                 </form>
                                                 
                                                 <script>
