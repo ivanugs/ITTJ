@@ -1,81 +1,136 @@
-.carousel-custom{
-   height: 60vh;
-   width: 100vw;
-   margin: auto;
-   min-height: 300px;
+:root{
+   --var-color-main: #2d572c;
+   --var-color-links-primario: #2c7959;
+   --var-color-links-secundario: #44b687;
 }
 
-.carousel-caption-custom {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   flex: 1 1 auto;
-   min-width: 50%;
-   min-height: 100%;
-   text-align: center;
+body{
+   font-family: 'Poppins', sans-serif;
 }
 
-.carousel-caption h1,
-.carousel-caption p {
+.carousel-text h1,
+.carousel-text p {
    width: fit-content;
    height: fit-content;
-   background: rgb(45, 87, 44, 0.5);
+   background: #2d572c80;
    padding: 10px; 
    color: white;
    margin: 10px; 
    border-radius: 15px;
 }
 
-.carousel-caption-custom p {
-   font-size: 2rem;
-   margin-bottom: 1rem;
-}
-
-.carousel-caption-custom h1 {
-   font-size: 4rem;
-   margin-bottom: 2rem; 
-}
-
 /* Media query para ajustar estilos en pantallas más pequeñas */
-@media (max-width: 768px) {
-   .carousel-caption-custom p {
-      font-size: 0.5rem !important;
+@media (max-width: 767px) {
+   #uib_sidebar_wrapper {
+      margin-bottom: 20px;
    }
 
-   .carousel-caption-custom h1 {
-      font-size: 1rem !important;
+   #uib_sidebar_wrapper>button {
+      width: 100%;
+      text-align: left;
    }
 
-   .carousel-custom{
-      height: auto;
-      width: 100vw;
-      margin: auto;
-      min-height: 300px;
-   }
+   #uib_sidebar_wrapper>div {
+      padding: 10.5px;
+      border: 1px solid #386b3780;
+      border-top: 0;
+  }
 
-   .carousel-caption h1,
-   .carousel-caption p {
-      border-radius: 7px;
-      margin: auto;
-      padding: 5px;
-   }
-
-   .image-custom{
-      overflow: visible;
-   }
-
-   .carousel-control-next-icon,
-   .carousel-control-prev-icon,
-   .carousel-indicators{
-      display: none;
-   }
+  #content-captions{
+   height: 280px !important;
+  }
 }
 
-/* laptop and desktop */
-@media (min-width: 769px) {
-   .image-custom{
-      height: 60vh;
-      width: 100vw;
-   }
+.card{
+   display: block;
+   text-decoration: none !important;
+   color: #333;
+   border: 1px solid #dee2e6;
 }
+
+.card:hover {
+   background-color: var(--var-color-links-primario);
+   color: #FFF;
+}
+
+.card-title {
+   font-weight: 500;
+   margin-bottom: .35rem;
+}
+
+.card-text {
+   font-size: 1rem;
+   color: #6c757d;
+}
+
+.card:hover .card-text {
+   color: #FFF;
+}
+
+#uib_buscador .fa {
+   position: absolute;
+   z-index: 99;
+   margin-top: 10px;
+   margin-left: 6px;
+   color: #2d572ca0;
+}
+
+#uib_buscador input {
+   text-indent: 15px;
+}
+
+.btn-showSearchButton {
+   color: #fff;
+   background-color: var(--var-color-main);
+   border-color: #386b3780;
+}
+
+.btn-showSearchButton:hover {
+   color: #fff;
+   background-color: #2d572cc5;
+}
+
+.btn-showSearchButton:active {
+   background-color: #213f21;
+   border-color: var(--var-color-main);
+}
+
+.search-custom:hover {
+   background-color: var(--var-color-links-primario);
+   color: #FFF;
+}
+
+.search-custom:hover .card-text {
+   color: #FFF;
+}
+
+.link-planta:hover {
+   background-color: var(--var-color-links-primario);
+   color: #FFF;
+}
+
+.pagination>li>a, .pagination>li>span {
+   color: var(--var-color-links-primario);
+   background-color: #fff;
+   border: 1px solid #ddd;
+   margin-left: -1px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    color: #fff;
+    background-color: var(--var-color-links-primario);
+    border-color: var(--var-color-links-secundario);
+}
+
+footer{
+   background: var(--var-color-main);
+}
+
+.carousel-caption {
+   position: static !important;
+   padding-top: 1rem;
+   padding-bottom: 1rem;
+}
+
+

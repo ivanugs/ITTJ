@@ -43,9 +43,16 @@ Route::middleware(['auth'])->group(function () {
 
 // Estas rutas son las que estan visibles al usuario
 Route::controller(PlantaFamiliaController::class)->group(function(){
-    Route::get('/planta-familias', 'index')->name('planta-familias.index');
-    Route::get('/planta-familias/{id}', 'show')->name('planta-familias.show');
+    Route::get('/plantas', 'index')->name('plantas.index');
+    Route::get('/plantas/{id}', 'show')->name('plantas.show');
+    Route::get('/plantas/index/{letra}', 'indexPorLetra')->name('plantas.letra');
+    Route::get('/familias', 'families')->name('familias.index');
+    Route::get('/familias/{id}/{scientific_name}/especies', 'showFamilies')->name('familias.show');
 });
+
+Route::post('/familias/search',[PlantaFamiliaController::class, 'searchFamilies']);
+
+Route::post('/plantas/search',[PlantaFamiliaController::class, 'searchSpecies']);
 
 Route::controller(AboutController::class)->group(function(){
     Route::get('/about/resumen', 'summary')->name('about.summary');

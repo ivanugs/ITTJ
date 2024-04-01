@@ -31,10 +31,10 @@
                     </a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link mx-lg-5 a-custom" href="{{route('planta-familias.index')}}">Ordenado por Nombre</a>
+                    <a class="nav-link mx-lg-5 a-custom" href="{{route('plantas.index')}}">Ordenado por Nombre</a>
                 </li>
                 <li class="nav-item nav-item-custom">
-                    <a class="nav-link mx-lg-5 a-custom" href="#">Ordenado por Familia</a>
+                    <a class="nav-link mx-lg-5 a-custom" href="{{route('familias.index')}}">Ordenado por Familia</a>
                 </li>
                 {{-- <li class="nav-item nav-item-custom">
                     <a class="nav-link mx-lg-5 a-custom" href="#">Biblioteca</a>
