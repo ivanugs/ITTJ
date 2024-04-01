@@ -37,7 +37,7 @@
             @yield('content')
         </main>
         <footer>
-            <div class="container footer-custom p-6 my-5">
+            <div class="container footer-custom p-6 mt-5">
                 <div class="row justify-content-center">
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-3 col-12">

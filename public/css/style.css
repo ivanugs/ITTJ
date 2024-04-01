@@ -35,6 +35,10 @@ body{
       border: 1px solid #386b3780;
       border-top: 0;
   }
+
+  #content-captions{
+   height: 280px !important;
+  }
 }
 
 .card{
@@ -128,3 +132,5 @@ footer{
    padding-top: 1rem;
    padding-bottom: 1rem;
 }
+
+
