@@ -12,14 +12,12 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Show') }} Planta Familia</span>
+                            <span class="card-title">{{ __('Ver') }} Planta Familia</span>
+                            
+                            <div class="d-inline p-3">
+                                <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Regresar') }}</a>
+                            </div>
                         </div>
-                        {{-- <div class="float">
-                            <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Back') }}</a>
-                        </div> --}}
-                    </div>
-                    <div class="float">
-                        <a class="btn btn-primary" href="{{ route('admin.index') }}"> {{ __('Atras') }}</a>
                     </div>
 
                     <div class="card-body">
