@@ -21,7 +21,7 @@
                             <div class="float-right">
                                 @if (auth()->user()->hasRole('Admin'))
                                 <a  href="{{ route('usuarios.index') }}" class="btn btn-primary btn-sm float-right fs-5 my-2">
-                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-user"></i>
                                     {{ __('Registrar nuevo usuario') }}
                                 </a>
                                 @endif
