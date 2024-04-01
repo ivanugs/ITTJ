@@ -14,7 +14,7 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="display-6" style="display: flex; justify-content: space-between; align-items: center;">
                             {{-- <span id="card_title" class="fs-4 fw-bold text-success"> --}}
                                 {{ __('Registros de plantas y familias') }}
                             </span>
