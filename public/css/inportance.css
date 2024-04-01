@@ -1,0 +1,8 @@
+.texto{
+    text-align:justify;/*Alineacion del texto justificado*/
+}
+
+.texto p {
+    margin-bottom: 30px; /* Espacio entre párrafos */
+}
+
