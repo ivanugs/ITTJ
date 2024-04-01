@@ -66,6 +66,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registrar') }}
                                 </button>
+                                <div class="d-inline p-3">
+                                    <a class="btn btn-danger" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>
+                                </div>
                             </div>
                             <ul class="navbar-nav ms-auto ">
                                 <!-- Authentication Links -->
