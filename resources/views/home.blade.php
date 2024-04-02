@@ -57,7 +57,15 @@
         <article class="text-center fs-4">
           <p class="my-10">
             El Herbario del Instituto Tecnológico de Tlajomulco cuenta con aproximadamente 1500 especies de plantas distribuidas en 4000 ejemplares debidamente montadas y etiquetadas. 🌿
-        </p>
+          </p>
+          <div class="aspect-ratio aspect-ratio-16x9">
+          <img 
+            class="aspect-ratio-img mx-auto mb-5" 
+            style="width:900px; border-radius:10px;"
+            src="{{asset('images/about/banner-1.png')}}" 
+            alt="Banner herbario"
+          >
+          </div>
         </article>
     </div>
 </div>

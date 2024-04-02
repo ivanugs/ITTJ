@@ -4,6 +4,7 @@
         <title>@yield('title')</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
+        <meta name="theme-color" content="#44b687">
         <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -61,7 +62,7 @@
                             <p class="my-5"></p>
                             <p class="text-white lead mb-2 fw-medium">Número de visitas <span id="currentYear"></span>:</p>
                             <!-- Código para el contador de visitas-->
-                            <div id="sfcxeq4dejh48xa5rfj1nlldahbxdn9cck8">
+                            {{-- <div id="sfcxeq4dejh48xa5rfj1nlldahbxdn9cck8">
                                 <a href="https://www.contadorvisitasgratis.com/geozoom.php?c=xeq4dejh48xa5rfj1nlldahbxdn9cck8&amp;base=counter7&amp;type_clic=1" target="_blank">
                                     <img border="0" src="https://counter7.contadorvisitasgratis.com/private/counter.php?c=xeq4dejh48xa5rfj1nlldahbxdn9cck8&amp;init=1711912203136&amp;init_freecounterstat=1&amp;library=library_counters&amp;coef=1&amp;type=163&amp;lenght=5&amp;pv=0" alt="clic para ver los detalles de las visitas este sitio" title="clic para ver los detalles de las visitas este sitio">
                                 </a>
@@ -73,7 +74,7 @@
                                 <a href="" title="contador de visitas gratis">
                                     <img src="https://counter7.optistats.ovh/private/contadorvisitasgratis.php?c=xeq4dejh48xa5rfj1nlldahbxdn9cck8" border="0" title="contador de visitas gratis" alt="contador de visitas gratis">
                                 </a>
-                            </noscript>
+                            </noscript> --}}
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-3 col-xs-12 d-flex align-items-center justify-content-center">
                             <iframe 

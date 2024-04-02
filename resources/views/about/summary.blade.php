@@ -5,18 +5,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10">
-            <h1 class="text-center pt-5 pb-3 h1">Resumen del proyecto</h1>
-            <article class="text-center fs-4">
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+            <h1 class="text-center pt-3 pb-3 mb-4 h1 border-bottom fw-light">Resumen del proyecto</h1>
+            <article class="text-center fs-5">
                 <p class="mb-2">
                     El Herbario del Instituto Tecnológico de Tlajomulco cuenta con aproximadamente 1500 especies de plantas distribuidas en 4000 ejemplares debidamente montadas y etiquetadas. 🌿
-                </p>
-                <img class="mx-auto mb-5" style="width:900px;" src="{{asset('images/about/banner-1.png')}}" alt="Banner herbario">
-
-                <p class="mb-2">
                     Se encuentra registrado internacionalmente con el Código de Herbario<strong> CREG</strong> del <strong>Index Herbariorum</strong> y es de relevante importancia por ser reconocido como uno de los primeros que se forman en el Estado de Jalisco. Cuenta con ejemplares tipo y topotipo de la región.
                 </p>
-                <img class="mx-auto mb-5" style="width:500px;" src="{{asset('images/about/collage.png')}}" alt="Banner herbario">
+                <img class="mx-auto my-3" style="width:500px;" src="{{asset('images/about/collage.png')}}" alt="Banner herbario">
 
                 <p class="mb-5">
                     Este museo apoya en la caracterización de plantas a nivel nacional e internacional pues una de las primeras actividades a realizar en los trabajos de investigación agrícola o biológica relacionadas con especies vegetales, es la correcta identificación de las plantas seguidas de la corroboración de los ejemplares lo cual se lleva a cabo sólo con la visita a algún Herbario.
