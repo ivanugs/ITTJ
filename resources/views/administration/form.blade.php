@@ -13,11 +13,6 @@
             {!! $errors->first('common_name', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Fecha de publicación') }}
-            {{ Form::date('publication_date', $plantaFamilias->publication_date, ['class' => 'form-control' . ($errors->has('publication_date') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Publicacion']) }}
-            {!! $errors->first('publication_date', '<div class="invalid-feedback">:message</div>') !!}
-        </div>
-        <div class="form-group">
             {{ Form::label('Descripción') }}
             {{ Form::textarea('description', $plantaFamilias->description, ['class' => 'form-control' . ($errors->has('description') ? ' is-invalid' : ''), 'placeholder' => 'Descripcion']) }}
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}

@@ -25,7 +25,6 @@ class PlantaFamiliaFactory extends Factory
             'common_name' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
             'type' => 'familia',
-            'publication_date' => $this->faker->dateTime()
         ];
     }
 }
