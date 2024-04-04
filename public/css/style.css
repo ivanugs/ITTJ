@@ -133,4 +133,6 @@ footer{
    padding-bottom: 1rem;
 }
 
-
+#especial_thanks li::marker{
+   content: '🌿';
+}

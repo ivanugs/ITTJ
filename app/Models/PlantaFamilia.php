@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property $family
  * @property $image
  * @property $description
- * @property $publication_date
  * @property $created_at
  * @property $updated_at
  *
@@ -29,7 +28,6 @@ class PlantaFamilia extends Model
     static $rules = [
 		'scientific_name' => 'required|string',
 		'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-		'publication_date' => 'required|date'
     ];
 
     public function getFamilyNameAttribute()
@@ -43,7 +41,7 @@ class PlantaFamilia extends Model
 
     protected $perPage = 20;
     
-    protected $fillable = ['scientific_name','common_name','family','image','description','type','publication_date'];
+    protected $fillable = ['scientific_name','common_name','family','image','description','type'];
 
     use HasFactory;
 }

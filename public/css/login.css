@@ -1,15 +1,19 @@
+:root{
+    --var-color-main: #2d572c;
+    --var-color-links-primario: #2c7959;
+    --var-color-links-secundario: #44b687;
+ }
+
 .navbar-app {
-    /* background-color: #2d572c; */
     color: white;
     padding: 20px; 
     text-align: center; 
 }
 
 .navbar-app .navbar-brand {
-    font-size: 24px; /* Tamaño del texto */
     color: white;
-    font-weight: bold; /* Negrita */
-    width: 100%; /* Asegura que el ancho del texto sea del 100% */
+    font-weight: bold;
+    width: 100%;
 }
 
 body  {
@@ -40,12 +44,11 @@ to {background-position: -100px 0px;background-size:2750px;}
 }
 
 .custom-card {
-    /* Agrega aquí tus estilos personalizados para la tarjeta */
-    background-color: #336132; /* Ejemplo de color de fondo */
+    background-color: var(--var-color-main);
     color: white;
 }
 
 body {
-    background-color: #b0e85a; /* Cambia este color al que desees */
+    background-color: var(--var-color-links-primario); /* Cambia este color al que desees */
 }
 

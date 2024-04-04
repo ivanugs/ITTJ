@@ -37,17 +37,21 @@
       <div id="caption-0" class="carousel-text text-wrap carousel-caption-custom">
         {{-- <p class="text-decoration-underline fs-2">Inicio</p> --}}
         <h1 class="display-2">Bienvenido al Herbario Virtual</h1>
-        <p class="fs-5">Texto representativo para la primera diapositiva.</p>
+        <p class="fs-5">Instituto Tecnológico de Tlajomulco de Zuñiga.</p>
       </div>
       <div id="caption-1" class="carousel-text text-wrap carousel-caption-custom" style="display: none;">
         {{-- <p class="text-decoration-underline fs-2">Especies</p> --}}
         <h1 class="display-2">Descubre la gran cantidad de especies</h1>
-        <p class="fs-5">Texto representativo para la segunda diapositiva.</p>
+        <a href="{{route('plantas.index')}}">
+          <p class="fs-5"> Da clic aquí para explorar las especies.</p>
+        </a>
       </div>
       <div id="caption-2" class="carousel-text text-wrap carousel-caption-custom" style="display: none;">
         {{-- <p class="text-decoration-underline fs-2">Acerca de</p> --}}
         <h1 class="display-2">Conoce más acerca de este proyecto</h1>
-        <p class="fs-5">Texto representativo para la tercera diapositiva.</p>
+        <a href="{{route('about.summary')}}">
+          <p class="fs-5">Conocer mas acerca del proyecto.</p>
+        </a>
       </div>
     </div>
   </div>

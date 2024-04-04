@@ -19,7 +19,7 @@
         </div>
         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
             <article>
-                <ul class="fs-5">
+                <ul id="especial_thanks" class="fs-5">
                     <li class="mb-4">Ing. Rafael Daniel Huerta</li>
                     <li class="mb-4">Lic. Mitssy Martínez Rosales</li>
                     <li class="mb-4">Lic. Alexia López Romo</li>
