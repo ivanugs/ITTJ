@@ -3,11 +3,34 @@
 @section('title', 'Equipo')
 
 @section('content')
-<link href="{{ asset('css/team.css') }}" rel="stylesheet">
+<style>
+    article {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    article div {
+        text-align: center;
+    }
+
+    article img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    article div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
-            <h1 class="text-center pt-3 pb-3 mb-4 h1 border-bottom fw-light mb-5">Participantes en el desarrollo del Proyecto</h1>
+            <h1 class="text-center pt-3 pb-3 h1 border-bottom fw-light mb-5">Participantes en el desarrollo del Proyecto</h1>
             <article class="mb-5">
                 <div>
                     <img src="{{ asset('images/about/team/male-icon.png') }}" alt="Miembro del equipo 2">

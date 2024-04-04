@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
-    <link href="{{ asset('css/global.css') }}" rel="stylesheet">
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     {{-- Si comento la sigiente linea aparese el login y regitro --}}
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
@@ -17,14 +15,13 @@
     <title>{{ config('app.name', 'Administración') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <!-- Navbar login -->
 <body>
+    @auth
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-app">
             <div class="container">
@@ -68,10 +65,11 @@
                 </div>
             </div>
         </nav>
-        <main class="">
-            @yield('content')
-        </main>
     </div>
+    @endauth
+    <main class="">
+        @yield('content')
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
     <script>
         $(document).ready(function(){
