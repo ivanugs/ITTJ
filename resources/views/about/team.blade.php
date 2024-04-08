@@ -46,6 +46,20 @@
                         Desarrollador de Proyecto
                     </p>
                 </div>
+                <div>
+                    <img src="{{ asset('images/about/team/alonso.jpg') }}" alt="Miembro del equipo 2">
+                    <p class="fs-6">
+                        <a style="color: #44b687" href="#">Ing. José Alonso Figueroa Martínez</a><br> 
+                        Desarrollador de Proyecto
+                    </p>
+                </div>
+                <div>
+                    <img src="{{ asset('images/about/team/lulu.jpg') }}" alt="Miembro del equipo 2">
+                    <p class="fs-6">
+                        <a style="color: #44b687" href="#">Ing. Maria de Lourdes Martìnez Ramos</a><br> 
+                        Desarrollador de Proyecto
+                    </p>
+                </div>
             </article>
         </div>
     </div>
