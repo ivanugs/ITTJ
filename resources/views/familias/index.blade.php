@@ -8,7 +8,7 @@
     <div class="row justify-content-center">
         <h1 class="text-center pt-3 pb-3 mb-4 h1 border-bottom fw-light">Lista de familias</h1>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
                 <div id="uib_sidebar_wrapper">
                     <button id="showSearchButton" class="btn btn-showSearchButton d-lg-none d-md-none d-sm-none" type="button" data-toggle="collapse" data-target="#uib_sidebar_collapse" aria-expanded="true" aria-controls="uib_sidebar_collapse">
                         <span class="va-table">

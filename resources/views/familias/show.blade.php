@@ -9,7 +9,7 @@
     <div class="row justify-content-center">
         <h1 class="text-center pt-3 pb-3 mb-4 h1 border-bottom fw-light">Lista de especies</h1>
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
                 <img width="200" src="{{asset('storage/' . $familias->image)}}" alt="">
                 <h1 class="display-6 mb-2">{{strtoupper($familias->scientific_name)}}</h1>
                 <p class="lead fw-medium my-2 fw-light d-inline">Nombre comun: </p>

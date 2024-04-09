@@ -11,8 +11,8 @@
 </div>
 
 
-<nav class="navbar navbar-expand-xl fixed-top p-2  navbar-custom">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-xl fixed-top p-2 navbar-custom">
+    <div class="container-fluid navbar-custom--contenedor">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>

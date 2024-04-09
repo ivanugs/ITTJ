@@ -23,6 +23,10 @@
    position: relative;
 }
 
+.navbar-custom--contenedor{
+   justify-content: flex-end !important;
+}
+
 .a-custom {
    font-size: 20px;
    letter-spacing: 0.03em;
