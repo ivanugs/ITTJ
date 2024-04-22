@@ -43,9 +43,9 @@
                 <nav class="mb-4">
                     <ul class="pagination pagination-custom justify-content-center flex-wrap">
                         @foreach (range('A', 'Z') as $letra)
-                            <li class="page-item">
-                                <a class="page-link" href="{{ route('plantas.letra', $letra) }}">{{ $letra }}</a>
-                            </li>
+                        <li class="page-item">
+                            <a class="page-link" href="{{ route('plantas.letra', $letra) }}">{{ $letra }}</a>
+                        </li>
                         @endforeach
                     </ul>
                 </nav>

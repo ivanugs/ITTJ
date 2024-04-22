@@ -27,7 +27,7 @@ class PlantaFamilia extends Model
 {
     static $rules = [
 		'scientific_name' => 'required|string',
-		'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+		'image' => 'image|mimes:jpeg,png,jpg,webp|max:2048',
     ];
 
     public function getFamilyNameAttribute()

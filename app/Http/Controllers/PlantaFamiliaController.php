@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\PlantaFamilia;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Response;
 
 class PlantaFamiliaController extends Controller
 {
@@ -13,7 +13,6 @@ class PlantaFamiliaController extends Controller
         $plantas = PlantaFamilia::where('type', 'planta')
                         ->orderBy('scientific_name', 'asc') // Reemplaza 'nombre_del_campo' con el nombre real del campo
                         ->paginate();
-    
         return view('plantas.index', compact('plantas'))
                 ->with('i', (request()->input('page', 1) - 1) * $plantas->perPage());
     }
