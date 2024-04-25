@@ -63,7 +63,7 @@
                                     {{ __('Iniciar Sesion') }}
                                 </button>
                                 <div class="d-inline p-3">
-                                    <a href="{{ route('home') }}" class="btn btn-danger fs-5 my-2">Regresar</a>
+                                    <a href="{{ route('home') }}" class="btn btn-danger fs-5 my-2">Cancelar</a>
                                 </div>
                                 {{-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
