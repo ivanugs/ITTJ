@@ -12,7 +12,7 @@
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex justify-content-center">
             <img 
-                style="width: 300px; height:600px; mask-image:linear-gradient(black 85%, transparent)" 
+                style="width: 300px; height:800px; mask-image:linear-gradient(black 85%, transparent)" 
                 src="{{asset('images/about/thanks.png')}}" 
                 alt="imagen-planta-agradecimientos" 
             >
