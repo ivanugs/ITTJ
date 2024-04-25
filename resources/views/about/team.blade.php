@@ -43,14 +43,14 @@
                     <img src="{{ asset('images/about/team/wm01.png') }}" alt="Miembro del equipo 2">
                     <p class="fs-6">
                         <a style="color: #44b687" href="#">L.I. Abel Ramírez Molina</a><br> 
-                        Colaborador de Proyecto
+                        Colaborador del Proyecto
                     </p>
                 </div>
                 <div>
                     <img src="{{ asset('images/about/team/wm02.png') }}" alt="Miembro del equipo 2">
                     <p class="fs-6"> 
                         <a style="color: #44b687" href="#">M.C. José Luis Torres Rodríguez</a><br> 
-                        Colaborador de Proyecto
+                        Colaborador del Proyecto
                     </p>
                 </div>
                 <div>
@@ -66,21 +66,21 @@
                     <img src="{{ asset('images/about/team/ivan.jpg') }}" alt="Miembro del equipo 2">
                     <p class="fs-6">
                         <a style="color: #44b687" href="#">Ing. Iván Uriel González Segundo</a><br> 
-                        Desarrollador de Proyecto
+                        Desarrollador del Proyecto
                     </p>
                 </div>
                 <div>
                     <img src="{{ asset('images/about/team/alonso.jpg') }}" alt="Miembro del equipo 2">
                     <p class="fs-6">
                         <a style="color: #44b687" href="#">Ing. José Alonso Figueroa Martínez</a><br> 
-                        Desarrollador de Proyecto
+                        Desarrollador del Proyecto
                     </p>
                 </div>
                 <div>
                     <img src="{{ asset('images/about/team/lulu.jpg') }}" alt="Miembro del equipo 2">
                     <p class="fs-6">
                         <a style="color: #44b687" href="#">Ing. Maria de Lourdes Martìnez Ramos</a><br> 
-                        Desarrollador de Proyecto
+                        Desarrollador del Proyecto
                     </p>
                 </div>
             </article>
