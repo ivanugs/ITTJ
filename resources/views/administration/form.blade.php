@@ -69,12 +69,12 @@
             {!! $errors->first('description', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group fs-5">
-            {{ Form::label('Familia') }}
+            {{ Form::label('Familias') }}
             {{ Form::select('family', $familias, $plantaFamilias->family, ['class' => 'form-control' . ($errors->has('family') ? ' is-invalid' : ''), 'placeholder' => 'Seleccione la familia, en caso de aplicar.', 'id' => 'family']) }}
             {!! $errors->first('family', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group fs-5">
-            {{ Form::label('type', 'Tipo de planta') }}
+            {{ Form::label('type', 'Tipo de planta o familia') }}
             {{ Form::select('type', ['planta' => 'Planta', 'familia' => 'Familia'], $plantaFamilias->type, ['class' => 'form-control' . ($errors->has('type') ? ' is-invalid' : ''), 'id' => 'type']) }}
             {!! $errors->first('type', '<div class="invalid-feedback">:message</div>') !!}
         </div>        
@@ -86,7 +86,7 @@
     </div>
     {{-- creamos el boton de cancelar para la vista editar --}}
     <div class="d-inline">
-        <button type="submit" class="btn btn-primary fs-5">{{ __('Enviar') }}</button>
+        <button type="submit" class="btn btn-primary fs-5">{{ __('Guardar') }}</button>
     </div>
     <div class="d-inline p-3">
         <a class="btn btn-danger fs-5" href="{{ route('admin.index') }}"> {{ __('Cancelar') }}</a>

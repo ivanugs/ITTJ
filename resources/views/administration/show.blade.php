@@ -103,7 +103,7 @@
                         {{ $plantaFamilias->description }}
                     </div>
                     <div class="form-group fs-5 mb-2 text-start">
-                        <strong>Fecha Publicacion:</strong>
+                        <strong>Fecha Publicacion y Hora:</strong>
                         {{ $plantaFamilias->updated_at }}
                     </div>
                     <div class="form-group fs-5 mb-2 text-start">
