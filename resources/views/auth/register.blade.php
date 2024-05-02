@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Registrar usuario | Herbario Virtual')
 @section('content')
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 <div class="container">

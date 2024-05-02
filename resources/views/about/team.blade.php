@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Equipo')
+@section('title', 'Equipo | Herbario Virtual')
 
 @section('content')
 <style>

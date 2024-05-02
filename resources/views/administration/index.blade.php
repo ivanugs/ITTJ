@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('template_title')
-    Registros
-@endsection
+@section('title', 'Registros | Herbario Virtual')
 
 @section('content')
 <!-- jQuery -->

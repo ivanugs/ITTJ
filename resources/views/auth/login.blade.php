@@ -1,5 +1,6 @@
     <!--app se cambio por por palntilla que esta en la carpeta layout-->
 @extends('layouts.app')
+@section('title', 'Inicio de sesión | Herbario Virtual')
 @section('content')
 <link href="{{ asset('css/login.css') }}" rel="stylesheet">
 <div class="container ">

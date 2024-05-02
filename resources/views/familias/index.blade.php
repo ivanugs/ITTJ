@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('title', 'Familias')
+@section('title', 'Familias | Herbario Virtual')
 
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}">

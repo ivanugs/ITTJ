@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
-@section('template_title')
-    {{ __('Create') }} Planta Familia
-@endsection
+@section('title', 'Crear registro | Herbario Virtual')
 
 @section('content')
     <section class="content container-fluid">

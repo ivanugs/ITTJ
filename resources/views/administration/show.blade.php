@@ -1,9 +1,5 @@
 @extends('layouts.app')
-
-@section('template_title')
-    {{ $plantaFamilias->name ?? __('Show') . " " . __('Planta Familia') }}
-@endsection
-
+@section('title', $plantaFamilias->scientific_name . ' | Herbario Virtual' ?? __('Mostrar datos del regitsro | Herbario Virtual'))
 @section('content')
 <style>
     :root{
@@ -76,7 +72,7 @@
         <div class="col-lg-10 col-md-10 col-sm-12 col-sx-12">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <span class="card-title display-6">{{ __('Ver datos del registro') }}</span>
+                    <span class="card-title display-6">{{ __('Datos del registro') }}</span>
                     <div class="d-inline-flex">
                         <a class="btn btn-danger fs-5" href="{{ route('admin.index') }}"> {{ __('Regresar') }}</a>
                     </div>

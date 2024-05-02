@@ -91,7 +91,7 @@
                         <div class="row mt-3 pt-3 border-top">
                             <div class="col-12">
                                 <p class="text-white text-center lead">
-                                    © Copyright 2024 TecNM / ITTJ - Todos los Derechos Reservados
+                                    © Copyright <span id="currentYear"></span> TecNM / ITTJ - Todos los Derechos Reservados
                                 </p>
                                 <p class="text-white text-center lead">
                                     Última actualización: 10/Enero/2024
@@ -115,12 +115,14 @@
             crossorigin="anonymous"
         ></script>
         <script>
-            // Obtiene el elemento span
-            var currentYearElement = document.getElementById("currentYear");
+            // Obtiene todos los elementos span con el ID "currentYear"
+            var currentYearElements = document.querySelectorAll("span#currentYear");
             // Obtiene el año actual
             var currentYear = new Date().getFullYear();
-            // Asigna el año actual al elemento span
-            currentYearElement.textContent = currentYear;
+            // Asigna el año actual a todos los elementos span
+            currentYearElements.forEach(function(element) {
+                element.textContent = currentYear;
+            });
         </script>
         
     </body>
