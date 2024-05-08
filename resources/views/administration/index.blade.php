@@ -53,12 +53,17 @@
     .table-responsive {
         overflow-x: auto;
     }
+
+    .section__header{
+        display: flex;
+        flex-direction: column
+    }
 </style>
 <div class="container-fluid">
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10 col-sm-10 col-sm-12 col-xs-12">
             <div class="card">
-                <div class="card-header mb-2">
+                <div class="card-header mb-2 section__header">
                     <div class="display-6 d-flex justify-content-between align-items-center">
                         {{-- <span id="card_title" class="fs-4 fw-bold text-success"> --}}
                             {{ __('Registros de plantas y familias') }}
