@@ -31,7 +31,7 @@
                     <p class="lead mb-2">{{$plantas->updated_at}}</p>
                 </div>
                 <div class="float-left">
-                    <a class="btn btn-success mb-5" href="#" onclick="goBack()"> {{ __('Back') }}</a>
+                    <a class="btn btn-success mb-5" href="#" onclick="goBack()"> {{ __('Atras') }}</a>
                 </div>
             </div>
             
