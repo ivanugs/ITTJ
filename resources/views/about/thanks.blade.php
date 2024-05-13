@@ -32,6 +32,7 @@
                     <li class="mb-4">Ing. Rodolfo Cortéz Iñiguez</li>
                     <li class="mb-4">M.A.E. José Luis Torres Rodríguez</li>
                     <li class="mb-4">M.S.C. Abel Ramírez Molina</li>
+                    <li class="mb-4">M.C. Christian Guillermo Murguía Vadillo</li>
                     <li class="mb-4">Ing. Iván Uriel González Segundo</li>
                     <li class="mb-4">Ing. José Alonso Figueroa Martinez</li>
                     <li class="mb-4">Ing. Maria de Lourdes Martìnez Ramos</li>

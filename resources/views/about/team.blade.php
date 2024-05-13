@@ -80,7 +80,7 @@
                     <img src="{{ asset('images/about/team/lulu.jpg') }}" alt="Miembro del equipo 2">
                     <p class="fs-6">
                         <a style="color: #44b687" href="#">Ing. Maria de Lourdes Martìnez Ramos</a><br> 
-                        Desarrollador del Proyecto
+                        Colaboradora del Proyecto
                     </p>
                 </div>
             </article>
